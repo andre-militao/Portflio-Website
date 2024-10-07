@@ -1,14 +1,20 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+   
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfólio Website</title>
+    <title>Portfólio André Militão</title>
+    <!-- Estilos -->
     <link rel="stylesheet" href="style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
 
+   
+    <canvas id="backgroundCanvas"></canvas>
+
+    
     <header class="header">
         <a href="#home" class="logo">André <span>Militão</span></a>
         <i class='bx bx-menu' id="menu-icon"></i>
@@ -16,56 +22,143 @@
             <a href="#home" class="active">Home</a>
             <a href="#educacao">Educação</a>
             <a href="#projetos">Projetos</a>
-            <a href="#habilidades">Habilidades</a>
+            <a href="#metodologia-ferramentas">Metodologia e Ferramentas</a>
             <a href="#contato">Contato</a>
         </nav>
     </header>
 
+    
     <section class="home" id="home">
         <div class="home-content">
-            <h1>Olá, me chamo<span> André</span></h1>
+            <h1>Bem-vindo ao meu portfólio!</h1>
             <h3 class="text-animation">Eu sou um <span></span></h3>
             <p>Fico feliz em compartilhar meu portfólio com você. Sou criador de experiências digitais centradas no usuário, com background em Análise de Sistemas e Modelagem 3D.</p>
-            
             <div class="social-icons">
-                <a href="#"><i class='bx bxl-linkedin'></i></a>
-                <a href="#"><i class='bx bxl-github'></i></a>
-                <a href="#"><i class='bx bxl-instagram-alt'></i></a>
-                <a href="#"><i class='bx bxl-whatsapp'></i></a>
+                <a href="https://www.linkedin.com/in/andré-militão-a8a994318/" target="_blank"><i class='bx bxl-linkedin'></i></a>
+                <a href="https://github.com/andre-militao/andre-militao" target="_blank"><i class='bx bxl-github'></i></a>
+                <a href="https://www.instagram.com/4ndremilitao" target="_blank"><i class='bx bxl-instagram-alt'></i></a>
+                <a href="https://api.whatsapp.com/send/?phone=5534996345476&text&type=phone_number&app_absent=0" target="_blank"><i class='bx bxl-whatsapp'></i></a>
             </div>
-
             <div class="btn-group">
-                <a href="#" class="btn">Contrate-me</a>
+                <a href="#contato" class="btn">Contrate-me</a>
                 <a href="#contato" class="btn">Contato</a>
             </div>
         </div>
     </section>
 
+   
     <section id="educacao">
         <h2>Educação</h2>
-        <p>Insira suas informações educacionais aqui.</p>
+        <div class="timeline">
+            <div class="timeline-item">
+                <h3>Análise e Desenvolvimento de Sistemas</h3>
+                <span>IMEPAC | 2022 - 2024</span>
+                <p>Atualmente cursando Análise e Desenvolvimento de Sistemas, desenvolvendo habilidades técnicas em programação, desenvolvimento de software, arquitetura de sistemas e análise de dados. O curso me oferece uma base sólida para criar soluções eficientes e escaláveis em diferentes plataformas.</p>
+            </div>
+            <div class="timeline-item">
+                <h3>UX/UI Design</h3>
+                <span>EBAC | 2023 - 2024</span>
+                <p>Estou realizando um curso intensivo de 10 meses em UX/UI Design na EBAAC, focando em criar interfaces intuitivas e experiências do usuário otimizadas. Aprendo técnicas de pesquisa, prototipação e design visual para desenvolver soluções centradas no usuário, com foco em usabilidade e estética.</p>
+            </div>
+            <div class="timeline-item">
+                <h3>Modelagem 3D</h3>
+                <span>EBAC | 2023 - 2024</span>
+                <p>estou concluindo um curso de modelagem 3D, que me capacita a trabalhar com softwares como Blender, Maya e outros. Essa formação me permite criar modelos tridimensionais detalhados para aplicações que variam de jogos a simulações e animações.</p>
+            </div>
+        </div>
     </section>
 
+    
     <section id="projetos">
         <h2>Projetos</h2>
-        <p>Liste alguns projetos que você realizou, incluindo links, imagens e descrições.</p>
+        <div class="project-gallery">
+            <div class="project-item">
+                <img src="C:\Users\andre\OneDrive\Documentos\projetos\projetos de prototipagens\Energy Drink 4.png" alt="Projeto 1">
+                <div class="project-info">
+                    <h3>Ative-se</h3>
+                    <p>Neste projeto no Figma, desenvolvi uma apresentação interativa para o energético "Ativi-se". A experiência é focada em uma lata do produto, que gira nas telas. Usei prototipagem para implementar transições suaves e animações</p>
+                </div>
+            </div>
+            <div class="project-item">
+                <img src="C:\Users\andre\OneDrive\Documentos\projetos\3D projetos\original-a4ea113078f78aadede08b91d7134ea5.png" alt="Projeto 2">
+                <div class="project-info">
+                    <h3>Caneca Furada</h3>
+                    <p>Neste projeto no Blender, modele uma caneca furada que derrama café. Utilizei a técnica de "Boolean" para criar o furo e simulei o café com física de fluidos, aplicando texturas sutis.</p>
+                </div>
+            </div>
+            <div class="project-item">
+                <img src="C:\Users\andre\OneDrive\Documentos\projetos\projetos de prototipagens\Desktop - 1.png" alt="Projeto 3">
+                <div class="project-info">
+                    <h3>Projeto Ponto do Burguer</h3>
+                    <p>Descrição breve do projeto 3.</p>
+                </div>
+            </div>
+            
+        </div>
     </section>
 
-    <section id="habilidades">
-        <h2>Habilidades</h2>
-        <ul>
-            <li>UI/UX Design</li>
-            <li>Desenvolvimento Frontend</li>
-            <li>Modelagem 3D</li>
-            <li>JavaScript</li>
-            <li>HTML/CSS</li>
-        </ul>
+    
+    <section id="metodologia-ferramentas">
+        <h2>Metodologia e Ferramentas</h2>
+        <div class="metodologia">
+            <div class="metodo-item">
+                <i class='bx bx-search-alt-2'></i>
+                <h4>Pesquisa e Descoberta</h4>
+                <p>Entendimento profundo do problema e necessidades do usuário.</p>
+            </div>
+            <div class="metodo-item">
+                <i class='bx bx-pencil'></i>
+                <h4>Prototipagem</h4>
+                <p>Criação de protótipos para validação de ideias.</p>
+            </div>
+            <div class="metodo-item">
+                <i class='bx bx-test-tube'></i>
+                <h4>Testes de Usabilidade</h4>
+                <p>Iteração com base no feedback dos usuários.</p>
+            </div>
+            <div class="metodo-item">
+                <i class='bx bx-code-alt'></i>
+                <h4>Desenvolvimento</h4>
+                <p>Implementação das soluções com foco na experiência do usuário.</p>
+            </div>
+        </div>
+        <div class="ferramentas">
+            <h3>Ferramentas que Utilizo</h3>
+            <div class="tools">
+                <div class="tool-item">
+                    <i class='bx bxl-figma'></i>
+                    <h4>Figma</h4>
+                </div>
+                <div class="tool-item">
+                    <i class='bx bxl-adobe'></i>
+                    <h4>Adobe XD</h4>
+                </div>
+                <div class="tool-item">
+                    <i class='bx bxl-blender'></i>
+                    <h4>Blender</h4>
+                </div>
+                <div class="tool-item">
+                    <i class='bx bxl-html5'></i>
+                    <h4>HTML5</h4>
+                </div>
+                <div class="tool-item">
+                    <i class='bx bxl-css3'></i>
+                    <h4>CSS3</h4>
+                </div>
+                <div class="tool-item">
+                    <i class='bx bxl-javascript'></i>
+                    <h4>JavaScript</h4>
+                </div>
+               
+            </div>
+        </div>
     </section>
 
+    
     <section id="contato">
         <h2>Contato</h2>
         <p>Preencha o formulário abaixo para entrar em contato.</p>
-        <form>
+        <form id="contact-form">
             <input type="text" placeholder="Seu Nome" required>
             <input type="email" placeholder="Seu Email" required>
             <textarea placeholder="Sua Mensagem" required></textarea>
@@ -76,4 +169,3 @@
     <script src="script.js"></script>
 </body>
 </html>
-
