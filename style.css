@@ -86,7 +86,6 @@ body {
     display: none;
 }
 
-
 section {
     min-height: 100vh;
     padding: 8rem 12% 5rem;
@@ -100,7 +99,6 @@ section.visible {
     transform: translateY(0);
 }
 
-
 .home {
     display: flex;
     align-items: center;
@@ -113,7 +111,7 @@ section.visible {
 }
 
 .home-content h1 {
-    font-size: 4rem;
+    font-size: 3rem;
     font-weight: 700;
     margin-bottom: 1rem;
 }
@@ -318,46 +316,29 @@ section.visible {
     line-height: 1.6;
 }
 
-#projetos {
-    background: rgba(0, 0, 0, 0.5);
-    padding: 4rem 3%;
-    border-radius: 12px;
-    border: 2px solid rgba(0, 255, 255, 0.5);
-    box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-#projetos:hover {
-    transform: scale(1.02);
-    box-shadow: 0 0 25px rgba(0, 255, 255, 0.7);
-}
 
 .project-gallery {
-    display: flex;
-    overflow-x: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 2rem;
     padding-bottom: 1rem;
 }
 
 .project-item {
-    min-width: 300px;
     background: rgba(0, 0, 0, 0.4);
     border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 10px;
     overflow: hidden;
     transition: transform 0.3s, box-shadow 0.3s;
-    cursor: pointer;
+    position: relative;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 0.5s forwards;
 }
 
 .project-item:hover {
     transform: scale(1.05);
     box-shadow: 0 0 30px rgba(0, 255, 255, 0.5);
-}
-
-.project-item img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
 }
 
 .project-info {
@@ -372,6 +353,17 @@ section.visible {
 .project-info p {
     font-size: 1rem;
     line-height: 1.4;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 #metodologia-ferramentas {
@@ -523,6 +515,7 @@ form button:hover {
     box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
 }
 
+/* Animação ao Exibir Seções */
 section {
     opacity: 0;
     transform: translateY(20px);
@@ -562,4 +555,5 @@ section.visible {
     #menu-icon {
         display: block;
     }
+    
 }
