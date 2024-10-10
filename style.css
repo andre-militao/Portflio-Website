@@ -1,4 +1,4 @@
-/* Estilos Globais */
+
 * {
     margin: 0;
     padding: 0;
@@ -22,7 +22,6 @@ body {
     overflow-x: hidden;
 }
 
-/* Canvas de Fundo */
 #backgroundCanvas {
     position: fixed;
     top: 0;
@@ -32,7 +31,6 @@ body {
     z-index: -1;
 }
 
-/* Cabeçalho */
 .header {
     position: fixed;
     top: 0;
@@ -88,7 +86,7 @@ body {
     display: none;
 }
 
-/* Seções */
+
 section {
     min-height: 100vh;
     padding: 8rem 12% 5rem;
@@ -102,7 +100,7 @@ section.visible {
     transform: translateY(0);
 }
 
-/* Home */
+
 .home {
     display: flex;
     align-items: center;
@@ -193,9 +191,6 @@ section.visible {
     color: black;
 }
 
-/* Animação de Texto */
-
-
 .text-animation span {
     position: relative;
 }
@@ -245,7 +240,6 @@ section.visible {
     }
 }
 
-/* Seção Educação */
 #educacao {
     background: rgba(0, 0, 0, 0.5);
     padding: 4rem 3%;
@@ -324,7 +318,6 @@ section.visible {
     line-height: 1.6;
 }
 
-/* Seção Projetos */
 #projetos {
     background: rgba(0, 0, 0, 0.5);
     padding: 4rem 3%;
@@ -381,7 +374,6 @@ section.visible {
     line-height: 1.4;
 }
 
-/* Seção Metodologia e Ferramentas */
 #metodologia-ferramentas {
     background: rgba(0, 0, 0, 0.5);
     padding: 4rem 3%;
@@ -471,7 +463,6 @@ section.visible {
     font-size: 1.2rem;
 }
 
-/* Seção Contato */
 #contato {
     background: rgba(0, 0, 0, 0.5);
     padding: 4rem 3%;
@@ -532,7 +523,6 @@ form button:hover {
     box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
 }
 
-/* Animação ao Exibir Seções */
 section {
     opacity: 0;
     transform: translateY(20px);
@@ -544,7 +534,6 @@ section.visible {
     transform: translateY(0);
 }
 
-/* Responsividade */
 @media (max-width: 768px) {
     .home {
         flex-direction: column;
@@ -573,80 +562,4 @@ section.visible {
     #menu-icon {
         display: block;
     }
-}
-@media (max-width: 768px) {
- 
-    nav ul {
-        display: flex;
-        flex-direction: column; 
-        align-items: center;
-        padding: 0;
-    }
-    
-   
-    video, iframe {
-        width: 100%;
-        height: auto;
-    }
-
-    .project-item {
-        margin: 20px 0;
-        text-align: center; 
-    }
-
-    h1, h2, h3, p {
-        font-size: 1.2rem;
-    }
-
-
-    .container {
-        padding: 20px;
-    }
-
-    button, a {
-        font-size: 1rem;
-        padding: 10px 20px; 
-    }
-}
-
-.menu-icon {
-    display: block;
-    cursor: pointer;
-    font-size: 2rem;
-}
-
-nav ul {
-    display: none;
-}
-
-.menu-icon.active + nav ul {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-nav ul li {
-    margin: 10px 0;
-}
-img, video, iframe {
-    max-width: 100%;
-    height: auto; 
-}
-.project-container {
-    display: flex;
-    flex-direction: column; 
-    align-items: center; 
-}
-
-.project-item {
-    width: 100%;
-    margin: 10px 0;
-}
-h1 {
-    font-size: 2rem; 
-}
-
-p {
-    font-size: 1rem;
-    margin: 10px 0; 
 }
