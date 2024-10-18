@@ -1,4 +1,4 @@
-
+/* Estilos Globais */
 * {
     margin: 0;
     padding: 0;
@@ -22,7 +22,7 @@ body {
     overflow-x: hidden;
 }
 
-
+/* Canvas de Fundo */
 #backgroundCanvas {
     position: fixed;
     top: 0;
@@ -32,7 +32,7 @@ body {
     z-index: -1;
 }
 
-
+/* Cabeçalho */
 .header {
     position: fixed;
     top: 0;
@@ -88,6 +88,7 @@ body {
     display: none;
 }
 
+/* Seções */
 section {
     min-height: 100vh;
     padding: 8rem 12% 5rem;
@@ -101,7 +102,7 @@ section.visible {
     transform: translateY(0);
 }
 
-
+/* Home */
 .home {
     display: flex;
     align-items: center;
@@ -192,7 +193,7 @@ section.visible {
     color: black;
 }
 
-
+/* Animação de Texto */
 
 
 .text-animation span {
@@ -244,7 +245,7 @@ section.visible {
     }
 }
 
-
+/* Seção Educação */
 #educacao {
     background: rgba(0, 0, 0, 0.5);
     padding: 4rem 3%;
@@ -323,7 +324,7 @@ section.visible {
     line-height: 1.6;
 }
 
-
+/* Seção Projetos */
 .project-gallery {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -413,20 +414,38 @@ section.visible {
 }
 .project-item {
     box-shadow: 0 4px 20px rgba(0, 255, 255, 0.3);
+    max-width: 300px; /* Define um limite para a largura */
+    max-height: 200px; /* Limite para altura */
+    width: 100%;
+    height: auto;
+    margin: 10px;
+    overflow: hidden; /* Esconde partes da imagem que ultrapassarem */
+    border-radius: 10px;
 }
 .project-item:hover {
     transform: scale(1.05);
     transition: transform 0.3s, box-shadow 0.3s;
 }
 .project-item img {
-    width: 100%; 
-    height: auto; 
-    object-fit: cover; 
-    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Garante que a imagem preencha o container sem esticar */
 }
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Ajusta o número de colunas conforme o espaço */
+    gap: 20px;
+}
+max-width: 300px; /* Define um limite para a largura */
+    max-height: 200px; /* Limite para altura */
+    width: 100%;
+    height: auto;
+    margin: 10px;
+    overflow: hidden; /* Esconde partes da imagem que ultrapassarem */
+    border-radius: 10px;
 
 
-
+/* Seção Metodologia e Ferramentas */
 #metodologia-ferramentas {
     background: rgba(0, 0, 0, 0.5);
     padding: 4rem 3%;
@@ -517,7 +536,7 @@ section.visible {
     font-size: 1.2rem;
 }
 
-
+/* Seção Contato */
 #contato {
     background: rgba(0, 0, 0, 0.5);
     padding: 4rem 3%;
@@ -578,7 +597,7 @@ form button:hover {
     box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
 }
 
-
+/* Animação ao Exibir Seções */
 section {
     opacity: 0;
     transform: translateY(20px);
@@ -590,7 +609,7 @@ section.visible {
     transform: translateY(0);
 }
 
-
+/* Responsividade */
 @media (max-width: 768px) {
     .home {
         flex-direction: column;
