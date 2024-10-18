@@ -1,4 +1,3 @@
-
 const canvas = document.getElementById('backgroundCanvas');
 const ctx = canvas.getContext('2d');
 
@@ -40,12 +39,13 @@ for (let i = 0; i < 100; i++) {
 
 drawStars();
 
-
+// Animação ao Scroll
 const sections = document.querySelectorAll('section');
 const options = {
     root: null,
-    threshold: 0.1,
+    threshold: 0.2,
 };
+
 
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -59,7 +59,7 @@ sections.forEach(section => {
     observer.observe(section);
 });
 
-
+// Animação do Formulário de Contato
 const form = document.getElementById('contact-form');
 
 form.addEventListener('submit', function(e) {
@@ -68,7 +68,7 @@ form.addEventListener('submit', function(e) {
     alert('Obrigado por entrar em contato!');
 });
 
-
+// Menu Responsivo
 const menuIcon = document.getElementById('menu-icon');
 const navbar = document.querySelector('.navbar');
 
@@ -77,7 +77,7 @@ menuIcon.addEventListener('click', () => {
 });
 
 
-
+// Ativar Link do Menu ao Scroll
 const navLinks = document.querySelectorAll('.navbar a');
 
 window.addEventListener('scroll', () => {
@@ -94,4 +94,9 @@ window.addEventListener('scroll', () => {
             link.classList.add('active');
         }
     });
+});
+
+window.addEventListener('resize', () => {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
 });
