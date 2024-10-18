@@ -77,6 +77,7 @@ menuIcon.addEventListener('click', () => {
 });
 
 
+
 const navLinks = document.querySelectorAll('.navbar a');
 
 window.addEventListener('scroll', () => {
