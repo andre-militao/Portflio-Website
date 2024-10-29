@@ -1,4 +1,4 @@
-/* Estilos Globais */
+
 * {
     margin: 0;
     padding: 0;
@@ -6,7 +6,7 @@
     text-decoration: none;
     outline: none;
     scroll-behavior: smooth;
-    font-family: "Sakana", sans-serif;
+    font-family: "Jost", sans-serif, Arial;
 }
 
 :root {
@@ -22,7 +22,7 @@ body {
     overflow-x: hidden;
 }
 
-/* Canvas de Fundo */
+
 #backgroundCanvas {
     position: fixed;
     top: 0;
@@ -32,7 +32,6 @@ body {
     z-index: -1;
 }
 
-/* Cabeçalho */
 .header {
     position: fixed;
     top: 0;
@@ -88,7 +87,6 @@ body {
     display: none;
 }
 
-/* Seções */
 section {
     min-height: 100vh;
     padding: 8rem 12% 5rem;
@@ -102,7 +100,6 @@ section.visible {
     transform: translateY(0);
 }
 
-/* Home */
 .home {
     display: flex;
     align-items: center;
@@ -193,9 +190,6 @@ section.visible {
     color: black;
 }
 
-/* Animação de Texto */
-
-
 .text-animation span {
     position: relative;
 }
@@ -245,7 +239,6 @@ section.visible {
     }
 }
 
-/* Seção Educação */
 #educacao {
     background: rgba(0, 0, 0, 0.5);
     padding: 4rem 3%;
@@ -323,50 +316,47 @@ section.visible {
     margin-top: 1rem;
     line-height: 1.6;
 }
-
-/* Seção Projetos */
 .projects-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* Aumentando o tamanho mínimo */
-    justify-content: center; /* Centraliza os itens */
-    gap: 30px; /* Espaço entre os projetos */
-    padding: 2rem; /* Espaçamento interno */
-    animation: fadeIn 1.5s ease-in-out; /* Animação de aparecimento */
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center; 
+    gap: 30px;
+    padding: 2rem;
+    animation: fadeIn 1.5s ease-in-out;
 }
 
 .project-item {
     box-shadow: 0 8px 30px rgba(0, 255, 255, 0.4);
-    max-width: 400px; /* Aumenta o limite para a largura */
-    max-height: 300px; /* Aumenta o limite para a altura */
+    max-width: 500px;
+    max-height: 350px;
     width: 100%;
     height: auto;
-    margin: 15px auto; /* Centraliza individualmente cada item */
+    margin: 15px auto;
     overflow: hidden;
-    border-radius: 12px; /* Cantos mais suaves */
-    position: relative; /* Para efeitos dinâmicos */
-    transition: transform 0.4s ease, box-shadow 0.4s ease; /* Efeito de transição suave */
-    background: rgba(255, 255, 255, 0.1); /* Fundo translúcido */
-    cursor: pointer; /* Indica que é clicável */
+    border-radius: 12px;
+    position: relative; 
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    background: rgba(255, 255, 255, 0.1);
+    cursor: pointer;
 }
 
 .project-item img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.5s ease; /* Transição suave para a imagem */
+    transition: transform 0.5s ease;
 }
 
 .project-item:hover img {
-    transform: scale(1.2); /* Zoom suave na imagem ao passar o mouse */
+    transform: scale(1.2);
 }
 
-/* Títulos e descrições dentro dos projetos */
 .project-info {
     position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
-    background: rgba(0, 0, 0, 0.6); /* Fundo semi-transparente */
+    background: rgba(0, 0, 0, 0.6);
     color: var(--text-color);
     padding: 1rem;
     text-align: center;
@@ -374,24 +364,19 @@ section.visible {
 }
 
 .project-info h3 {
-    font-size: 1.5rem; /* Aumenta o tamanho do título */
+    font-size: 1.5rem;
     margin: 0.5rem 0;
-    color: var(--main-color); /* Cor de destaque */
+    color: var(--main-color);
 }
 
 .project-info p {
-    font-size: 1.1rem; /* Aumenta o tamanho da descrição */
+    font-size: 1.1rem;
     margin-bottom: 0.5rem;
     color: var(--text-color);
 }
-
-
-/* Efeito de foco no texto ao passar o mouse */
 .project-item:hover .project-info {
     background: rgba(0, 0, 0, 0.8);
 }
-
-/* Animação ao abrir a página */
 .project-item {
     opacity: 0;
     transform: translateY(20px);
@@ -409,8 +394,6 @@ section.visible {
     }
 }
 
-
-/* Seção Metodologia e Ferramentas */
 #metodologia-ferramentas {
     background: rgba(0, 0, 0, 0.5);
     padding: 4rem 3%;
@@ -501,7 +484,6 @@ section.visible {
     font-size: 1.2rem;
 }
 
-/* Seção Contato */
 #contato {
     background: rgba(0, 0, 0, 0.5);
     padding: 4rem 3%;
@@ -561,8 +543,6 @@ form button:hover {
     background: #00d4d4;
     box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
 }
-
-/* Animação ao Exibir Seções */
 section {
     opacity: 0;
     transform: translateY(20px);
@@ -572,11 +552,9 @@ section {
 section.visible {
     opacity: 1;
     transform: translateY(0);
-    transition: opacity 1s ease-out, transform 1s ease-out; /* Ajustando a duração */
+    transition: opacity 1s ease-out, transform 1s ease-out;
 }
 
-
-/* Responsividade */
 @media (max-width: 768px) {
     .home {
         flex-direction: column;
