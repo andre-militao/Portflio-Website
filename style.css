@@ -87,6 +87,24 @@ body {
     display: none;
 }
 
+.navbar.active {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: var(--second-bg-color);
+    z-index: 10;
+    transition: 0.3s;
+}
+
+.navbar a {
+    margin: 1rem 0;
+}
+
+
 section {
     min-height: 100vh;
     padding: 8rem 12% 5rem;
@@ -219,16 +237,17 @@ section.visible {
 }
 
 @keyframes words {
-    0%, 33% {
+    0%, 20% {
         content: "UI/UX Designer";
     }
-    34%, 66% {
+    21%, 40% {
         content: "Desenvolvedor de Software";
     }
-    67%, 100% {
+    41%, 60% {
         content: "Artista 3D";
     }
 }
+
 
 @keyframes typing {
     0%, 15%, 50%, 65%, 100% {
@@ -382,6 +401,15 @@ section.visible {
     transform: translateY(20px);
     animation: fadeInProject 0.7s forwards ease-in-out;
 }
+
+section {
+    background-color: rgba(0, 0, 0, 0.7); 
+}
+
+.project-info p, .timeline-item p, .metodo-item p, .ferramentas h3 {
+    color: rgba(255, 255, 255, 0.9); 
+}
+
 
 @keyframes fadeInProject {
     from {
