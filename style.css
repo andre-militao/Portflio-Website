@@ -613,3 +613,45 @@ section.visible {
     }
     
 }
+@media (max-width: 768px) {
+    body {
+        padding: 0 5%;
+    }
+    .header {
+        padding: 1.5rem 5%;
+    }
+    .home-content h1 {
+        font-size: 2.5rem;
+    }
+    .home-content p {
+        font-size: 1rem;
+    }
+    .btn-group {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    #educacao, #metodologia-ferramentas, #contato {
+        padding: 3rem 5%;
+    }
+    .project-item {
+        max-width: 100%;
+        max-height: auto;
+        margin: 10px auto;
+    }
+}
+.navbar.active {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: var(--second-bg-color);
+    z-index: 10;
+}
+
+#menu-icon.bx-x {
+    color: var(--main-color);
+}
+
