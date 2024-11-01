@@ -589,8 +589,17 @@ section.visible {
     #menu-icon {
         display: block;
     }
+
     
+    .home-content h3 {
+        margin-bottom: 2rem;
+    }
+
+    .home-content p {
+        margin-top: 1.5rem; 
+    }
 }
+
 section {
     background-color: rgba(0, 0, 0, 0.7);
 }
