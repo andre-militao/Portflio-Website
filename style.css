@@ -212,7 +212,7 @@ section.visible {
 }
 
 .text-animation span::before {
-    content: "Monitor de CFTV";
+    content: "UI/UX Designer";
     color: var(--main-color);
     animation: words 10s infinite;
 }
@@ -230,38 +230,31 @@ section.visible {
 
 
 @keyframes cursor {
-    0% {
-        border-left-color: transparent;
-    }
-    50% {
-        border-left-color: var(--main-color);
-    }
-    100% {
-        border-left-color: transparent;
+    to {
+        border-left: 2px solid var(--main-color);
     }
 }
 
 @keyframes words {
-    0%, 33% {
-        content: "Monitor de CFTV";
+    0%, 20% {
+        content: "UI/UX Designer";
     }
-    34%, 66% {
+    21%, 40% {
         content: "Desenvolvedor de Software";
     }
-    67%, 100% {
-        content: "Técnico em Climatização";
+    41%, 60% {
+        content: "Artista 3D";
     }
 }
 
 @keyframes typing {
-    0%, 25%, 50%, 75%, 100% {
+    0%, 15%, 50%, 65%, 100% {
         width: 0;
     }
-    10%, 35%, 60%, 85% {
-        width: 100%;
+    5%, 30%, 55%, 80% {
+        width: calc(100% + 8px);
     }
 }
-
 
 #educacao {
     background: rgba(0, 0, 0, 0.5);
@@ -685,33 +678,3 @@ section {
     transform: scale(1.2);
     color: var(--text-color);
 }
-
-#experiencia {
-    background: rgba(0, 0, 0, 0.7);
-    padding: 4rem 3%;
-    border-radius: 12px;
-    border: 2px solid rgba(0, 255, 255, 0.5);
-    box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.experience-item {
-    margin-bottom: 2rem;
-    padding: 1.5rem;
-    background: rgba(0, 0, 0, 0.5);
-    border-radius: 8px;
-    border: 1px solid rgba(0, 255, 255, 0.2);
-}
-
-.experience-item h3 {
-    font-size: 1.8rem;
-    color: var(--main-color);
-    margin-bottom: 0.5rem;
-}
-
-.experience-item p {
-    margin-top: 0.5rem;
-    line-height: 1.6;
-    color: rgba(255, 255, 255, 0.9);
-}
-
