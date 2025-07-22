@@ -90,3 +90,7 @@ window.addEventListener('scroll', () => {
         }
     });
 });
+form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    form.innerHTML = "<p>Obrigado por entrar em contato! Responderemos em breve.</p>";
+});
