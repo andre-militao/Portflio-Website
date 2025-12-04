@@ -1,177 +1,323 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <!-- Metadados -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfólio André Militão</title>
+    <title>Portfólio André Militão - Desenvolvedor</title>
     <!-- Estilos -->
     <link rel="stylesheet" href="style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <!-- Canvas de Fundo -->
+    <div class="terminal-container">
+        <div class="terminal-header">
+            <div class="terminal-buttons">
+                <span class="btn-red"></span>
+                <span class="btn-yellow"></span>
+                <span class="btn-green"></span>
+            </div>
+            <span class="terminal-title">andre@portfolio:~$</span>
+        </div>
+        <div class="terminal-content" id="terminal">
+            <div class="terminal-line">Iniciando sistema...</div>
+            <div class="terminal-line">Carregando portfólio...</div>
+            <div class="terminal-line cursor">█</div>
+        </div>
+    </div>
+
     <canvas id="backgroundCanvas"></canvas>
 
-    <!-- Cabeçalho --> 
-    <header class="header">
-        <a href="#home" class="logo">André <span>Militão</span></a>
-        <i class='bx bx-menu' id="menu-icon"></i>
-        <nav class="navbar">
-            <a href="#home" class="active">Home</a>
-            <a href="#educacao">Educação</a>
-            <a href="#projetos">Projetos</a>
-            <a href="#metodologia-ferramentas">Metodologia e Ferramentas</a>
-            <a href="#contato">Contato</a>
-        </nav>
+    <header class="cyber-header">
+        <div class="header-content">
+            <div class="logo-section">
+                <div class="logo-glow"></div>
+                <span class="logo-text">ANDRE MILITÃO</span>
+                <div class="status-indicator">
+                    <span class="status-dot"></span>
+                    <span class="status-text">ONLINE</span>
+                </div>
+            </div>
+            <nav class="cyber-nav">
+                <a href="#inicio" class="nav-link" data-text="INICIO">INICIO</a>
+                <a href="#formacao" class="nav-link" data-text="FORMACAO">FORMAÇÃO</a>
+                <a href="#projetos" class="nav-link" data-text="PROJETOS">PROJETOS</a>
+                <a href="#habilidades" class="nav-link" data-text="HABILIDADES">HABILIDADES</a>
+                <a href="#contato" class="nav-link" data-text="CONTATO">CONTATO</a>
+            </nav>
+        </div>
     </header>
     
-    <!-- Seção Home -->
-    <section class="home" id="home">
-        <div class="home-content">
-            <h1>Bem-vindo ao meu Portfólio!</h1>
-            <h3 class="text-animation">Eu sou um <span></span></h3>
-            <p>Fico feliz em compartilhar meu portfólio com você. Sou criador de experiências digitais centradas no usuário, com background em Análise de Sistemas e Modelagem 3D.</p>
-            <div class="social-icons">
-                <a href="https://www.linkedin.com/in/andré-militão-a8a994318/" target="_blank"><i class='bx bxl-linkedin'></i></a>
-                <a href="https://www.instagram.com/4ndremilitao" target="_blank"><i class='bx bxl-instagram-alt'></i></a>
-                <a href="https://api.whatsapp.com/send/?phone=5534996345476&text&type=phone_number&app_absent=0" target="_blank"><i class='bx bxl-whatsapp'></i></a>
+    <section class="hero" id="inicio">
+        <div class="hero-content">
+            <div class="terminal-grid">
+                <div class="terminal-item">
+                    <span class="terminal-prompt">$</span>
+                    <span class="terminal-command">whoami</span>
+                </div>
+                <div class="terminal-output" id="typed-text"></div>
             </div>
-            <div class="btn-group">
-                <a href="#contato" class="btn">Contato</a>
-                <a href="#projetos" class="btn">Projetos</a>
+            
+            <div class="hero-description">
+                <p>Analista de Sistemas | Desenvolvedor Full-Stack | Criador Digital</p>
+                <p>Transformando ideias em código e soluções inovadoras.</p>
             </div>
+
+            <div class="action-buttons">
+                <button class="cyber-btn primary" onclick="scrollToSection('projetos')">
+                    <span>VER PROJETOS</span>
+                    <div class="btn-glow"></div>
+                </button>
+                <button class="cyber-btn secondary" onclick="scrollToSection('contato')">
+                    <span>ENTRAR EM CONTATO</span>
+                    <div class="btn-glow"></div>
+                </button>
+            </div>
+
+            <div class="hero-social">
+                <a href="https://github.com/andre-militao" target="_blank" class="social-icon">
+                    <i class='bx bxl-github'></i>
+                </a>
+                <a href="https://api.whatsapp.com/send/?phone=5534991916065&text&type=phone_number&app_absent=0" target="_blank" class="social-icon">
+                    <i class='bx bxl-whatsapp'></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="viewer-3d">
+            <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.30/build/spline-viewer.js"></script>
+            <spline-viewer url="https://prod.spline.design/N3UPGOG4E6dE6E4h/scene.splinecode"></spline-viewer>
         </div>
     </section>
 
-    <!-- Seção Educação -->
-    <section id="educacao">
-        <h2>Educação</h2>
-        <div class="timeline">
-            <div class="timeline-item">
+    
+    <section class="formation" id="formacao">
+        <div class="section-header">
+            <h2 class="section-title">
+                <span class="title-line"></span>
+                FORMAÇÃO ACADÊMICA
+                <span class="title-line"></span>
+            </h2>
+        </div>
+        
+        <div class="formation-grid">
+            <div class="formation-card">
+                <div class="card-header">
+                    <div class="card-icon">
+                        <i class='bx bxs-graduation-cap'></i>
+                    </div>
+                    <div class="card-period">2025</div>
+                </div>
                 <h3>Análise e Desenvolvimento de Sistemas</h3>
-                <span>IMEPAC | 2022 - 2025</span>
-                <p>Atualmente cursando Análise e Desenvolvimento de Sistemas, desenvolvendo habilidades técnicas em programação, desenvolvimento de software, arquitetura de sistemas e análise de dados. O curso me oferece uma base sólida para criar soluções eficientes e escaláveis em diferentes plataformas.</p>
+                <p class="institution">IMEPAC</p>
+                <div class="card-status ongoing">
+                    <i class='bx bx-loader-circle'></i>
+                    EM ANDAMENTO
+                </div>
+                <p class="description">Formação completa em desenvolvimento de software, arquitetura de sistemas, análise de dados e criação de soluções tecnológicas escaláveis.</p>
             </div>
-            <div class="timeline-item">
-                <h3>UX/UI Design</h3>
-                <span>Alura | 2024 - 2025</span>
-                <p>Estou realizando um curso intensivo em UX/UI Design na Alura, focando em criar interfaces intuitivas e experiências do usuário otimizadas. Aprendo técnicas de pesquisa, prototipação e design visual para desenvolver soluções centradas no usuário, com foco em usabilidade e estética.</p>
-            </div>
-            <div class="timeline-item">
+
+            <div class="formation-card">
+                <div class="card-header">
+                    <div class="card-icon">
+                        <i class='bx bx-cube'></i>
+                    </div>
+                    <div class="card-period">2025-2026</div>
+                </div>
                 <h3>Modelagem 3D</h3>
-                <span>Alura | 2024 - 2025</span>
-                <p>Estou concluindo um curso de modelagem 3D, que me capacita a trabalhar com softwares como Blender, Maya e outros. Essa formação me permite criar modelos tridimensionais detalhados para aplicações que variam de jogos a simulações e animações.</p>
+                <p class="institution">EBAC</p>
+                <div class="card-status ongoing">
+                    <i class='bx bx-loader-circle'></i>
+                    EM ANDAMENTO
+                </div>
+                <p class="description">Especialização em criação de modelos tridimensionais utilizando Blender e Maya para aplicações em jogos, simulações e animações.</p>
+            </div>
+
+            <div class="formation-card">
+                <div class="card-header">
+                    <div class="card-icon">
+                        <i class='bx bx-shield'></i>
+                    </div>
+                    <div class="card-period">2025</div>
+                </div>
+                <h3>Cibersegurança</h3>
+                <p class="institution">Alura</p>
+                <div class="card-status ongoing">
+                    <i class='bx bx-loader-circle'></i>
+                    EM ANDAMENTO
+                </div>
+                <p class="description">Curso intensivo focado em proteção de dados, análise de vulnerabilidades e implementação de medidas de segurança em sistemas digitais.</p>
             </div>
         </div>
     </section>
 
     <!-- Seção Projetos -->
-    <section id="projetos">
-        <h2 class="fade-in">Projetos</h2>
-        
-        <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.30/build/spline-viewer.js"></script>
-        <spline-viewer url="https://prod.spline.design/N3UPGOG4E6dE6E4h/scene.splinecode"></spline-viewer>
+    <section class="projects" id="projetos">
+        <div class="section-header">
+            <h2 class="section-title">
+                <span class="title-line"></span>
+                PROJETOS E PORTFÓLIO
+                <span class="title-line"></span>
+            </h2>
+        </div>
 
-        <div class="project-overview">
-            <p>Veja meus projetos de UX Design, desenvolvimento e arte 3D. Cada trabalho é elaborado com cuidado para oferecer uma experiência visual singular. Clique abaixo para conferir a coleção completa em uma plataforma dedicada!</p>
-            
-            <div class="project-link">
-                <h3>UX/UI Design e Web Design</h3>
-                <a href="https://www.behance.net/andremilitao" target="_blank" class="btn">Ver no Behance</a>
+        <div class="projects-grid">
+            <div class="project-card">
+                <div class="project-header">
+                    <div class="project-icon">
+                        <i class='bx bxl-github'></i>
+                    </div>
+                    <h3>Desenvolvimento & Código</h3>
+                </div>
+                <p>Explore meus projetos de desenvolvimento, aplicações web, APIs e soluções técnicas no GitHub.</p>
+                <div class="project-tech">
+                    <span>JavaScript</span>
+                    <span>Python</span>
+                    <span>React</span>
+                    <span>Node.js</span>
+                </div>
+                <a href="https://github.com/andre-militao" target="_blank" class="project-link">
+                    <span>VER REPOSITÓRIOS</span>
+                    <i class='bx bx-right-arrow-alt'></i>
+                </a>
             </div>
-            
-            <div class="project-link">
-                <h3>Projetos em 3D e Animação</h3>
-                <a href="https://dribbble.com/AndreMilitao" target="_blank" class="btn">Ver no Dribbble</a>
-            </div>
-            
-            <div class="project-link">
-                <h3>Desenvolvimento e Código</h3>
-                <a href="https://github.com/andre-militao" target="_blank" class="btn">Ver no GitHub</a>
-            </div>
+
+
         </div>
     </section>
 
-    <!-- Seção Metodologia e Ferramentas -->
-    <section id="metodologia-ferramentas">
-        <h2>Metodologia e Ferramentas</h2>
-        <div class="metodologia">
-            <div class="metodo-item">
-                <i class='bx bx-search-alt-2'></i>
-                <h4>Pesquisa e Descoberta</h4>
-                <p>Entendimento profundo do problema e necessidades do usuário.</p>
-            </div>
-            <div class="metodo-item">
-                <i class='bx bx-pencil'></i>
-                <h4>Prototipagem</h4>
-                <p>Criação de protótipos para validação de ideias.</p>
-            </div>
-            <div class="metodo-item">
-                <i class='bx bx-test-tube'></i>
-                <h4>Testes de Usabilidade</h4>
-                <p>Iteração com base no feedback dos usuários.</p>
-            </div>
-            <div class="metodo-item">
-                <i class='bx bx-code-alt'></i>
-                <h4>Desenvolvimento</h4>
-                <p>Implementação das soluções com foco na experiência do usuário.</p>
-            </div>
+    <section class="skills" id="habilidades">
+        <div class="section-header">
+            <h2 class="section-title">
+                <span class="title-line"></span>
+                HABILIDADES TÉCNICAS
+                <span class="title-line"></span>
+            </h2>
         </div>
-        <div class="ferramentas">
-            <h3>Ferramentas que Utilizo</h3>
-            <div class="tools">
-                <div class="tool-item">
-                    <i class='bx bxl-figma'></i>
-                    <h4>Figma</h4>
+
+        <div class="skills-container">
+            <div class="skills-category">
+                <h3>Linguagens de Programação</h3>
+                <div class="skill-bars">
+                    <div class="skill-bar">
+                        <span class="skill-name">JavaScript</span>
+                        <div class="skill-progress">
+                            <div class="skill-fill" data-level="90"></div>
+                        </div>
+                        <span class="skill-level">90%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <span class="skill-name">Java</span>
+                        <div class="skill-progress">
+                            <div class="skill-fill" data-level="65"></div>
+                        </div>
+                        <span class="skill-level">65%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <span class="skill-name">Python</span>
+                        <div class="skill-progress">
+                            <div class="skill-fill" data-level="80"></div>
+                        </div>
+                        <span class="skill-level">80%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <span class="skill-name">HTML5/CSS3</span>
+                        <div class="skill-progress">
+                            <div class="skill-fill" data-level="95"></div>
+                        </div>
+                        <span class="skill-level">95%</span>
+                    </div>
                 </div>
-                <div class="tool-item">
-                    <i class='bx bxl-adobe'></i>
-                    <h4>Adobe XD</h4>
-                </div>
-                <div class="tool-item">
-                    <i class='bx bxl-blender'></i>
-                    <h4>Blender</h4>
-                </div>
-                <div class="tool-item">
-                    <i class='bx bxl-html5'></i>
-                    <h4>HTML5</h4>
-                </div>
-                <div class="tool-item">
-                    <i class='bx bxl-css3'></i>
-                    <h4>CSS3</h4>
-                </div>
-                <div class="tool-item">
-                    <i class='bx bxl-javascript'></i>
-                    <h4>JavaScript</h4>
+            </div>
+
+            <div class="skills-category">
+                <h3>Frameworks & Ferramentas</h3>
+                <div class="tech-grid">
+                    <div class="tech-item">
+                        <i class='bx bxl-react'></i>
+                        <span>React</span>
+                    </div>
+                    <div class="tech-item">
+                        <i class='bx bxl-nodejs'></i>
+                        <span>Node.js</span>
+                    </div>
+                    <div class="tech-item">
+                        <i class='bx bxl-blender'></i>
+                        <span>Blender</span>
+                    </div>
+                    <div class="tech-item">
+                        <i class='bx bxl-git'></i>
+                        <span>Git</span>
+                    </div>
+                    <div class="tech-item">
+                        <i class='bx bxl-mongodb'></i>
+                        <span>MongoDB</span>
+                    </div>
+                    <div class="tech-item">
+                        <i class='bx bx-database'></i>
+                        <span>SQL</span>
+                    </div>
+                    <div class="tech-item">
+                        <i class='bx bx-shield'></i>
+                        <span>Security</span>
+                    </div>
+                    <div class="tech-item">
+                        <i class='bx bx-cloud'></i>
+                        <span>Cloud</span>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Seção Contato -->
-    <section id="contato">
-        <h2>Contato</h2>
-        <p>Preencha o formulário abaixo para entrar em contato.</p>
-        <form id="contact-form">
-            <input type="text" placeholder="Seu Nome" required>
-            <input type="email" placeholder="Seu Email" required>
-            <textarea placeholder="Sua Mensagem" required></textarea>
-            <button type="submit" class="btn">Enviar</button>
-        </form>
+    <section class="contact" id="contato">
+        <div class="section-header">
+            <h2 class="section-title">
+                <span class="title-line"></span>
+                CONECTE-SE COMIGO
+                <span class="title-line"></span>
+            </h2>
+        </div>
+
+        <div class="contact-grid">
+            <div class="contact-card">
+                <div class="contact-icon">
+                    <i class='bx bxl-github'></i>
+                </div>
+                <h3>GitHub</h3>
+                <p>Acesse meus projetos e contribua para o código aberto</p>
+                <a href="https://github.com/andre-militao" target="_blank" class="contact-link">
+                    <span>@andre-militao</span>
+                    <i class='bx bx-external-link'></i>
+                </a>
+            </div>
+
+            <div class="contact-card">
+                <div class="contact-icon">
+                    <i class='bx bxl-whatsapp'></i>
+                </div>
+                <h3>WhatsApp</h3>
+                <p>Conversa direta e rápida</p>
+                <a href="https://api.whatsapp.com/send/?phone=5534991916065&text&type=phone_number&app_absent=0" target="_blank" class="contact-link">
+                    <span>+55 (34) 99191-6065</span>
+                    <i class='bx bx-external-link'></i>
+                </a>
+            </div>
+
+
+        </div>
     </section>
 
-    <script src="script.js"></script>
-
     <footer class="footer">
-        <p>&copy; Transformando ideias em experiências visuais. Obrigado pela visita!</p>
-        <div class="social-icons">
-            <a href="https://www.linkedin.com/in/andré-militão-a8a994318/" target="_blank"><i class='bx bxl-linkedin'></i></a>
-            <a href="https://www.instagram.com/4ndremilitao" target="_blank"><i class='bx bxl-instagram-alt'></i></a>
-            <a href="https://api.whatsapp.com/send/?phone=5534996345476&text&type=phone_number&app_absent=0" target="_blank"><i class='bx bxl-whatsapp'></i></a>
+        <div class="footer-content">
+            <p>&copy; 2025 André Militão - Desenvolvedor</p>
+            <p>Desenvolvido com <span class="heart">♥</span> e muito código</p>
         </div>
     </footer>
+
+    <script src="script.js"></script>
 
 </body>
 </html>
